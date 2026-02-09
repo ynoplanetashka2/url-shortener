@@ -1,0 +1,9 @@
+services:
+    main:
+        build:
+            context: .
+            dockerfile: ./Dockerfile
+        volumes:
+          - "./src:/app/src"
+        ports:
+          - "8000:8000"
