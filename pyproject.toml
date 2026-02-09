@@ -19,8 +19,12 @@ dependencies = [
 dev = [
     "black>=23.0.0",
     "flake8>=6.0.0",
+    "httpx",
 ]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 asyncio_mode = "auto"
+
+[tool.setuptools.packages.find]
+where = ["."]

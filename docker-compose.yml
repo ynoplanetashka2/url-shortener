@@ -7,3 +7,11 @@ services:
           - "./src:/app/src"
         ports:
           - "8000:8000"
+
+    tests:
+        build:
+            context: .
+            dockerfile: ./Dockerfile
+        volumes:
+          - "./src:/app/src"
+        command: "pytest tests -v"
